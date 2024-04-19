@@ -28,13 +28,14 @@ public class VideoRepositoryImpl implements VideoRepository {
     public List<Video> find(String title) {
         List<Video> filteredVideos = null;
         for ( Video video : videos ) {
-            if(title.equals( video.title() )){
+            if(video.title().toLowerCase().contains( title.toLowerCase() )){
                 if(filteredVideos == null){
                     filteredVideos = new ArrayList<Video>();
                 }
                 filteredVideos.add(video);
             }
         }
+
         return filteredVideos;
     }
 
