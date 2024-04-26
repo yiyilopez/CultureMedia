@@ -10,5 +10,4 @@ public interface VideoRepository {
     List<Video> find(String title);
     List<Video> find(Double fromDuration, Double toDuration);
 
-
 }
