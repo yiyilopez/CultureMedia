@@ -43,7 +43,7 @@ public class CulturemediaServiceImpl implements CulturemediaService {
     @Override
     public List<Video> findByTitle(String title) throws VideoNotFoundException {
         List<Video> videos = this.videoRepository.find(title);
-        if (videos == null) {
+        if (videos == null || videos.isEmpty()) {
             throw new VideoNotFoundException();
         }
         return videos;
