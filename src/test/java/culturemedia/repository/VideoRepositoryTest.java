@@ -56,7 +56,7 @@ class VideoRepositoryTest {
     void when_FindByDuration_only_videos_between_the_range_should_be_returned_successfully() {
         List<Video> videos = videoRepository.find( 4.5, 5.5 );
         assertEquals(3, videos.size());
-        assertTrue(videos.stream().map(Video::code).toList().containsAll(List.of("01", "02", "06")));
+        assertTrue(videos.stream().map(Video::code).toList().equals(List.of("01", "02", "06")));
     }
 
     @Test
