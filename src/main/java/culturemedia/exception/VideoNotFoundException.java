@@ -2,7 +2,7 @@ package culturemedia.exception;
 
 import java.text.MessageFormat;
 
-public class VideoNotFoundException extends cultureMediaException {
+public class VideoNotFoundException extends CultureMediaException {
     public VideoNotFoundException() {
         super("can't find any video");
     }
